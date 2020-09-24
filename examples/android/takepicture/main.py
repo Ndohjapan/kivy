@@ -72,7 +72,9 @@ class TakePictureApp(App):
         im.thumbnail((width / 4, height / 4), Image.ANTIALIAS)
         im.save(fn, quality=95)
         self.root.add_widget(Picture(source=fn, center=self.root.center))
-
+        # You can display the file location from this point
+        # self.root.add_widget(Label(text=fn))
+        # Don't forget to import the Label module
     def on_pause(self):
         return True
 
